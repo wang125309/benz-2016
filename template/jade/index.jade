@@ -1,0 +1,71 @@
+doctype html
+html(lang="en")
+    head
+        title= "梅赛德斯奔驰"
+        meta(name="viewport",content="width=device-width,user-scalable=no")
+        meta(http-equiv="Content-Type",content="text/html",charset="utf-8")
+        script.
+            !(function() {
+                var rem;
+                rem = function() {
+                    document.documentElement.style.fontSize = (document.documentElement.clientWidth || document.documentElement.clientWidth) + 'px';
+                };
+                rem();
+                window.addEventListener('resize', rem, false);
+                var _hmt = _hmt || []
+            })();
+        link(href="/static/css/index.css",rel="stylesheet",type="text/css")
+    body
+        audio#audio(src="/static/image/background.mp3",loop="loop")
+        div.loading-background
+            div.nav
+                div.logo=""
+                div.music=""
+                div.share=""
+            div.num="0%"
+            div.processing=""
+        div.kv
+            div.nav
+                div.logo=""
+                div.music=""
+                div.share=""
+            div.title=""
+            div.map-title=""    
+            - for (var i = 0; i < 35 ; ++i) {
+            div.kvs(class="kv#{i}")=""
+            - }
+            - for (var i = 1; i <= 8 ; ++i) {
+            div(class="city-point#{i} city-point",data-index="#{i}")=""
+            - }
+        div.background
+            div.nav
+                div.logo=""
+                div.music=""
+                div.share=""
+        div.car
+            div.nav
+                div.logo=""
+                div.music=""
+                div.share=""
+            div.car-wrapper
+                div.car1=""
+                div.car1-title=""
+            div.car-wrapper
+                div.car2=""
+                div.car2-title=""
+            div.close=""
+        - for(var i = 1; i<=8; ++i) {
+        div(class="city#{i}")
+            div.nav
+                div.logo=""
+                div.music=""
+                div.share=""
+            div.title=""
+            div.button-area
+                div.back(data-index="#{i}")=""
+                div.ask=""
+                div.car-icon=""
+        - }       
+        
+        script(language="javascript",src="/static/js/index.js")
+
