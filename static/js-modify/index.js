@@ -25,7 +25,7 @@ interval = setInterval(function(){
     else {
         cnt += 1;
     }
-},10);
+},20);
 
 window.onload = function(){
     setTimeout(function(){
