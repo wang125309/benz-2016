@@ -56,7 +56,7 @@ work = function(){
         $(".num").html("100%");
         $(".loading-background").css("display","none");
         $(".kv").css("display","block");
-    },1500);
+    },500);
     flag = false;
     $(".kv").on("tap",function(){
         if(flag == true) {
@@ -83,7 +83,7 @@ work = function(){
             if(kv == 35) {
                 clearInterval(kvani);
             }
-        },20);
+        },30);
         for(i=1;i<=8;i++) {
             $(".city-point"+i).css("display","block");
         }
