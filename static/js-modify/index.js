@@ -27,7 +27,29 @@ interval = setInterval(function(){
     }
 },20);
 
-window.onload = function(){
+var imagesCnt = 0;
+var loadImage = function(src) {
+    var image = new Image();
+    image.onload = function(e) {
+        if ((image.readyState=='complete'||image.readyState=="loaded")||image.complete)  {
+            imagesCnt ++;
+            if(imagesCnt == 35) {
+                work();
+            }
+        }
+        else {
+            image.onreadystatechange(e);
+        }
+    }
+    image.src = src;
+};
+
+for(i=0;i<35;i++) {
+    loadImage('/static/image/'+i+'.jpg');
+}
+
+
+work = function(){
     setTimeout(function(){
         clearInterval(interval);
         $(".processing").css("width","50%");
@@ -58,7 +80,7 @@ window.onload = function(){
             else {
                 kv += 1;
             }
-            if(kv == 34) {
+            if(kv == 35) {
                 clearInterval(kvani);
             }
         },20);
