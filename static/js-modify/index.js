@@ -33,21 +33,30 @@ var loadImage = function(src) {
     image.onload = function(e) {
         if ((image.readyState=='complete'||image.readyState=="loaded")||image.complete)  {
             imagesCnt ++;
-            if(imagesCnt == 35) {
+            console.log(imagesCnt);
+            if(imagesCnt == 47) {
+
                 work();
             }
         }
         else {
             image.onreadystatechange(e);
         }
-    }
+    };
     image.src = src;
 };
 
 for(i=0;i<35;i++) {
     loadImage('/static/image/'+i+'.jpg');
 }
-
+for(i=1;i<=4;i++) {
+    loadImage('/static/image/background'+i+'.jpg');
+    loadImage('/static/image/background'+i+'.jpg');
+}
+loadImage('/static/image/map-title.png');
+loadImage('/static/image/background.jpg');
+loadImage('/static/image/car1.jpg');
+loadImage('/static/image/car2.jpg');
 
 work = function(){
     setTimeout(function(){
@@ -90,6 +99,17 @@ work = function(){
     });
     $(".city-point").on("tap",function(){
         showCity($(this).data("index"));
+    });
+    $(".car1").on("swipeLeft",function(){
+        $(".car-wrapper1").velocity("fideOut"); 
+        $(".car-wrapper2").velocity("fideIn"); 
+    });
+    $(".car2").on("swipeRight",function(){
+        $(".car-wrapper2").velocity("fideOut"); 
+        $(".car-wrapper1").velocity("fideIn"); 
+    });
+    $(".background").on("tap",function(){
+        $(".background").css("display","none");
     });
     var showCity = function(i) {
         $(".kv").css("display","none");
