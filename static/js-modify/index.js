@@ -58,7 +58,7 @@ window.onload = function(){
             else {
                 kv += 1;
             }
-            if(kv == 35) {
+            if(kv == 34) {
                 clearInterval(kvani);
             }
         },30);
