@@ -154,12 +154,20 @@ body
         left:0
         width:100%
         height:100%
-        background-image:url('/static/image/0.jpg')
-        background-size:100% 100%
-        background-color:#000
+        .kv-background
+            background-size:100% 100%
+            background-position:top
+            width:100%
+            height:100%
+            position:absolute
+            z-index:2
+            background-image:url('/static/image/0.jpg')
+            background-size:100% 100%
+            background-repeat:no-repeat
         .title
             position:absolute
             top:0.2rem
+            z-index:100
             width:100%
             height:1rem
             image-wauto('kv-title.png')

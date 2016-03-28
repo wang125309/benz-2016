@@ -48,6 +48,7 @@ window.onload = function(){
         $(".kv .map-title").velocity({
             "opacity":"1"
         },1050);
+        $(".kv-background").css("display","none");
         kvani = setInterval(function(){
             $(".kv"+kv).css("display","block");
             if(kv > 0) {
