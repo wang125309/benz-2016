@@ -38,6 +38,7 @@ html(lang="en")
             - for (var i = 1; i <= 8 ; ++i) {
             div(class="city-point#{i} city-point",data-index="#{i}")=""
             - }
+            div.up=""
         div.background
             div.nav
                 div.logo=""
@@ -55,14 +56,34 @@ html(lang="en")
                         div.line-cut-sex
                             div.important *
                             div.word 性别
-                            div.input-dashline#sex=""
+                            input.input-dashline#sex=""
                     div.line
                         div.important *
                         div.word 电话
                         input.input-dashline#mobile(type="number")
                     div.line
                         div.important=""
-
+                        div.word 邮箱
+                        input.input-dashline#email(type="text")
+                    div.line
+                        div.line-cut-name
+                            div.important *
+                            div.word 省份
+                            input.input-dashline#name(type="text")
+                        div.line-cut-sex
+                            div.important *
+                            div.word 城市
+                            input.input-dashline#sex=""
+                    div.line
+                        div.important *
+                        div.word 经销商
+                        input.input-dashline#mall(type="number")
+                    div.line
+                        label(for="check")
+                            input#check.check(type="checkbox",checked)
+                            div.word 我同意以上信息提交给主办方
+                    div.button-line
+                        div.button=""
         div.car
             div.nav
                 div.logo=""

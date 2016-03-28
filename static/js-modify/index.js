@@ -67,12 +67,13 @@ work = function(){
         $(".kv").css("display","block");
     },500);
     flag = false;
-    $(".kv").on("tap",function(){
+    $(".kv").on("touchmove",function(){
         if(flag == true) {
             return false;
         }
         flag = true;
         kv = 0;
+        $(".kv .up").css("display","none");
         $(".kv .title").velocity({
             "opacity":"0"
         },1050);
@@ -108,7 +109,7 @@ work = function(){
         $(".car-wrapper2").velocity("fadeOut"); 
         $(".car-wrapper1").velocity("fadeIn"); 
     });
-    $(".background").on("tap",function(){
+    $(".ask-close").on("tap",function(){
         $(".background").css("display","none");
     });
     var showCity = function(i) {
