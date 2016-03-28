@@ -34,7 +34,7 @@ window.onload = function(){
         $(".num").html("100%");
         $(".loading-background").css("display","none");
         $(".kv").css("display","block");
-    },500);
+    },1500);
     flag = false;
     $(".kv").on("tap",function(){
         if(flag == true) {
