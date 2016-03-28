@@ -61,7 +61,7 @@ window.onload = function(){
             if(kv == 34) {
                 clearInterval(kvani);
             }
-        },30);
+        },20);
         for(i=1;i<=8;i++) {
             $(".city-point"+i).css("display","block");
         }
