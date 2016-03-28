@@ -101,12 +101,12 @@ work = function(){
         showCity($(this).data("index"));
     });
     $(".car1").on("swipeLeft",function(){
-        $(".car-wrapper1").velocity("fideOut"); 
-        $(".car-wrapper2").velocity("fideIn"); 
+        $(".car-wrapper1").velocity("fadeOut"); 
+        $(".car-wrapper2").velocity("fadeIn"); 
     });
     $(".car2").on("swipeRight",function(){
-        $(".car-wrapper2").velocity("fideOut"); 
-        $(".car-wrapper1").velocity("fideIn"); 
+        $(".car-wrapper2").velocity("fadeOut"); 
+        $(".car-wrapper1").velocity("fadeIn"); 
     });
     $(".background").on("tap",function(){
         $(".background").css("display","none");
