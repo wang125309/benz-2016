@@ -2,6 +2,8 @@ from django.db import models
 
 
 # Create your models here.
+class Service(models.Model):
+    service_name = models.CharField(max_length=256,null=True)
 
 class User(models.Model):
     name = models.CharField(max_length=127,null=True)
@@ -12,5 +14,4 @@ class User(models.Model):
     city = models.CharField(max_length=256,null=True)
     service = models.ForeignKey(Service)
 
-class Service(models.Model):
-    service_name = models.CharField(max_length=256,null=True)
+

@@ -60,15 +60,19 @@ WSGI_APPLICATION = 'setting.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django_mysqlpool.backends.mysqlpool',
+        'NAME': 'benz',
+        'USER': 'root',
+        'PASSWORD': 'nameLR9969',
+        'HOST': 'benz.importos.com',
+        'PORT': '3306'
     }
 }
 
 SESSION_ENGINE = 'redis_sessions.session'
 SESSION_REDIS_HOST = '127.0.0.1'
 SESSION_REDIS_PORT = 6379
-SESSION_REDIS_PASSWORD = 'nameLR9969'
+SESSION_REDIS_PASSWORD = 'nameLR9959'
 SESSION_REDIS_DB = 0
 SESSION_REDIS_PREFIX = 'session'
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False

@@ -1,2 +1,5 @@
-./logs
+logs
 ./db.sqlite3
+venv
+nohup.out
+pip*

@@ -11,5 +11,4 @@ urlpatterns = [
     url(r'^api/insertuser/', 'portal.view.userView.insert_user'),
     url(r'^api/login/','portal.view.userView.login'),
     url(r'^api/logout/','portal.view.userView.logout'),
-    url(r'^api/wx')
 ]
