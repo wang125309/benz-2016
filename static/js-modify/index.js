@@ -26,45 +26,36 @@ interval = setInterval(function(){
         cnt += 1;
     }
 },30);
-
-var imagesCnt = 0;
-var loadImage = function(src) {
-    var image = new Image();
-    image.onload = function(e) {
-        if ((image.readyState=='complete'||image.readyState=="loaded")||image.complete)  {
-            imagesCnt ++;
-            console.log(imagesCnt);
-            if(imagesCnt == 47) {
-                work();
+window.onload = function() {
+    var imagesCnt = 0;
+    var loadImage = function(src) {
+        var image = new Image();
+        image.onload = function(e) {
+            if ((image.readyState=='complete'||image.readyState=="loaded")||image.complete)  {
+                imagesCnt ++;
+                console.log(imagesCnt);
+                if(imagesCnt == 47) {
+                    work();
+                }
             }
-        }
-        else {
-            image.onreadystatechange(e);
-        }
+            else {
+                image.onreadystatechange(e);
+            }
+        };
+        image.src = src;
     };
-    image.src = src;
-};
 
-for(i=0;i<35;i++) {
-    loadImage('/static/image/'+i+'.jpg');
-}
-for(i=1;i<=4;i++) {
-    loadImage('/static/image/background'+i+'.jpg');
-    loadImage('/static/image/background'+i+'.jpg');
-}
-loadImage('/static/image/map-title.png');
-loadImage('/static/image/background.jpg');
-loadImage('/static/image/car1.jpg');
-loadImage('/static/image/car2.jpg');
-
-work = function(){
-    setTimeout(function(){
-        clearInterval(interval);
-        $(".processing").css("width","50%");
-        $(".num").html("100%");
-        $(".loading-background").css("display","none");
-        $(".kv").css("display","block");
-    },500);
+    for(i=0;i<35;i++) {
+        loadImage('/static/image/'+i+'.jpg');
+    }
+    for(i=1;i<=4;i++) {
+        loadImage('/static/image/background'+i+'.jpg');
+        loadImage('/static/image/background'+i+'.jpg');
+    }
+    loadImage('/static/image/map-title.png');
+    loadImage('/static/image/background.jpg');
+    loadImage('/static/image/car1.jpg');
+    loadImage('/static/image/car2.jpg');
     $("#audio").attr({"src":"/static/image/background.mp3"});
     $("#audio")[0].play();
     $(".music").on("click",function(){
@@ -79,6 +70,16 @@ work = function(){
             $(".music").addClass("music-play");
         }
     });
+};
+work = function(){
+    setTimeout(function(){
+        clearInterval(interval);
+        $(".processing").css("width","50%");
+        $(".num").html("100%");
+        $(".loading-background").css("display","none");
+        $(".kv").css("display","block");
+    },500);
+
     flag = false;
     $(".kv").on("touchmove",function(){
         if(flag == true) {
