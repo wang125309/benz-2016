@@ -25,7 +25,7 @@ interval = setInterval(function(){
     else {
         cnt += 1;
     }
-},20);
+},30);
 
 var imagesCnt = 0;
 var loadImage = function(src) {
@@ -35,7 +35,6 @@ var loadImage = function(src) {
             imagesCnt ++;
             console.log(imagesCnt);
             if(imagesCnt == 47) {
-
                 work();
             }
         }
@@ -66,6 +65,20 @@ work = function(){
         $(".loading-background").css("display","none");
         $(".kv").css("display","block");
     },500);
+    $("#audio").attr({"src":"/static/image/background.mp3"});
+    $("#audio")[0].play();
+    $(".music").on("click",function(){
+        if(on) {
+            on = false;
+            document.getElementById("audio").pause();
+            $(".music").removeClass("music-play");
+        }   
+        else {
+            on = true;
+            document.getElementById("audio").play();
+            $(".music").addClass("music-play");
+        }
+    });
     flag = false;
     $(".kv").on("touchmove",function(){
         if(flag == true) {
