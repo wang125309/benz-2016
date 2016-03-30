@@ -81,7 +81,11 @@ work = function(){
     },500);
 
     flag = false;
-    $(".kv").on("touchmove",function(){
+    $(".close-kv-top").on("tap",function(){
+        $(".kv-top").velocity("fadeOut");
+        $(".kv .title").velocity("fadeIn");
+    });
+    $(".kv-background").on("touchmove",function(){
         if(flag == true) {
             return false;
         }
@@ -155,8 +159,16 @@ work = function(){
     $(document).on("touchmove",function(){
         return false;
     });
-    on = false;
-    $("#audio").attr({"src":"/static/image/background.mp3"});
-    $("#audio")[0].play();
+    var check = function() {
+        if(!$("#name").val().length) {
+            return false;
+        }       
+        
+    }
+    $(".button").on("tap",function(){
+        if(check()) {
+
+        } 
+    });
     
 }

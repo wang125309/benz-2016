@@ -9,7 +9,6 @@ import json
 import requests
 import logging
 from models import *
-from backend.models import Task,Problem
 from plugin import *
 import datetime
 from django.core.cache import cache
