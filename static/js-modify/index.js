@@ -1,6 +1,7 @@
 require("../../bower_components/zepto/zepto.js");
 require("../../bower_components/zeptojs/src/touch.js");
 require("../../bower_components/velocity/velocity.min.js");
+require("../../bower_components/swiper/dist/js/swiper.min.js");
 require("./share.js");
 
 var GUANGZHOU = '1';
@@ -28,6 +29,7 @@ interval = setInterval(function(){
 },30);
 window.onload = function() {
     var imagesCnt = 0;
+
     var loadImage = function(src) {
         var image = new Image();
         image.onload = function(e) {
@@ -84,6 +86,19 @@ work = function(){
     $(".close-kv-top").on("tap",function(){
         $(".kv-top").velocity("fadeOut");
         $(".kv .title").velocity("fadeIn");
+    });
+    var business = {
+        "1": [
+            {"name":"深圳","bus":[{"busname":"","address":""},{"busname":"","address":""}]},
+            {"name":"广州","bus":[{"busname":"","address":""},{"busname":"","address":""}]}
+        ],
+        "2": [
+            {"name":"南宁","bus":[{"busname":"","address":""},{"busname":"","address":""}]},
+            {"name":"泉州","bus":[{"busname":"","address":""},{"busname":"","address":""}]}
+        ]
+    };
+    $("#province option").on("tap",function(){
+        
     });
     $(".kv-background").on("touchmove",function(){
         if(flag == true) {
