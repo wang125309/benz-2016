@@ -240,7 +240,7 @@ work = function(){
     $("#submit").on("tap",function(){
         checked = check();
         if(checked) {
-            $.post("/portal/submit",{
+            $.post("/portal/submit/",{
                 "name":$("#name").val(),
                 "sex":$("#sex").val(),
                 "mobile":$("#mobile").val(),
