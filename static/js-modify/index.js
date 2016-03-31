@@ -142,6 +142,7 @@ work = function(){
             }
         }
     });
+    
     $(".kv-background").on("touchmove",function(){
         if(flag == true) {
             return false;
@@ -218,14 +219,55 @@ work = function(){
     });
     var check = function() {
         if(!$("#name").val().length) {
-            return false;
-        }       
-        
+            return -1;
+        }
+        else if(!$("#sex").val().length) {
+            return -2;
+        }
+        else if(!$("#mobile").val().length || $("#mobile").val().length != 11) {
+            return -3;
+        }
+        else if(!$("#province").val() == "0") {
+            return -4;
+        }
+        else {
+            return 1;
+        }
     }
-    $(".button").on("tap",function(){
-        if(check()) {
+    var submit_success = function() {
 
+    };
+    $(".submit").on("tap",function(){
+        checked = check();
+        if(checked) {
+            $.post("/portal/submit",{
+                "name":$("#name").val(),
+                "sex":$("#sex").val(),
+                "mobile":$("#mobile").val(),
+                "email":$("#email").val(),
+                "province":$("#province").val(),
+                "city":$("#city").val(),
+                "mall":$("#mall").val()
+            },function(data){
+                if(data.error_no == '0') {
+                    submit_success(); 
+                }
+            })
         } 
+        else {
+            if(checked == "-1") {
+                alert("名字是必填项哦");
+            }
+            else if(checked == '-2') {
+                alert("请选择性别");
+            }
+            else if(checked == '-3') {
+                alert("电话格式不对哦");
+            }
+            else if(checked == '-4') {
+                alert("请选择省份哦");
+            }
+        }
     });
     
 }

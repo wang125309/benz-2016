@@ -12,6 +12,6 @@ class User(models.Model):
     sex = models.CharField(max_length=4,null=True)
     province = models.CharField(max_length=256,null=True)
     city = models.CharField(max_length=256,null=True)
-    service = models.ForeignKey(Service)
+    service_name = models.CharField(max_length=256,null=True)
 
 
