@@ -237,7 +237,7 @@ work = function(){
     var submit_success = function() {
 
     };
-    $(".submit").on("tap",function(){
+    $("#submit").on("tap",function(){
         checked = check();
         if(checked) {
             $.post("/portal/submit",{
