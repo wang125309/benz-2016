@@ -14,4 +14,6 @@ class User(models.Model):
     city = models.CharField(max_length=256,null=True)
     service_name = models.CharField(max_length=256,null=True)
 
-
+class BackUser(models.Model):
+    service_name = models.CharField(max_length=256,null=True)
+    password = models.CharField(max_length=64,null=True)
