@@ -1,286 +1,216 @@
-DEBUG 2016-03-29 09:25:52,843 utils (0.001) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:28:11,296 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:28:38,926 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:28:53,891 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:29:03,846 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:29:03,869 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:29:03,870 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:03,870 schema CREATE TABLE `django_migrations` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `app` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `applied` datetime(6) NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:03,964 utils (0.094) CREATE TABLE `django_migrations` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `app` varchar(255) NOT NULL, `name` varchar(255) NOT NULL, `applied` datetime(6) NOT NULL); args=None
-DEBUG 2016-03-29 09:29:03,966 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_migrations'; args=[u'django_migrations']
-DEBUG 2016-03-29 09:29:03,970 utils (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:29:03,983 schema CREATE TABLE `django_content_type` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(100) NOT NULL, `app_label` varchar(100) NOT NULL, `model` varchar(100) NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:04,033 utils (0.049) CREATE TABLE `django_content_type` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(100) NOT NULL, `app_label` varchar(100) NOT NULL, `model` varchar(100) NOT NULL); args=None
-DEBUG 2016-03-29 09:29:04,034 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_content_type'; args=[u'django_content_type']
-DEBUG 2016-03-29 09:29:04,038 schema ALTER TABLE `django_content_type` ADD CONSTRAINT `django_content_type_app_label_76bd3d3b_uniq` UNIQUE (`app_label`, `model`); (params [])
-DEBUG 2016-03-29 09:29:04,062 utils (0.025) ALTER TABLE `django_content_type` ADD CONSTRAINT `django_content_type_app_label_76bd3d3b_uniq` UNIQUE (`app_label`, `model`); args=[]
-DEBUG 2016-03-29 09:29:04,063 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:04,064 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('contenttypes', '0001_initial', '2016-03-29 09:29:04.063968'); args=['contenttypes', u'0001_initial', u'2016-03-29 09:29:04.063968']
-DEBUG 2016-03-29 09:29:04,075 schema CREATE TABLE `auth_permission` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(50) NOT NULL, `content_type_id` integer NOT NULL, `codename` varchar(100) NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:04,115 utils (0.039) CREATE TABLE `auth_permission` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(50) NOT NULL, `content_type_id` integer NOT NULL, `codename` varchar(100) NOT NULL); args=None
-DEBUG 2016-03-29 09:29:04,116 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_permission'; args=[u'auth_permission']
-DEBUG 2016-03-29 09:29:04,124 schema CREATE TABLE `auth_group` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(80) NOT NULL UNIQUE); (params None)
-DEBUG 2016-03-29 09:29:04,163 utils (0.038) CREATE TABLE `auth_group` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(80) NOT NULL UNIQUE); args=None
-DEBUG 2016-03-29 09:29:04,164 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_group'; args=[u'auth_group']
-DEBUG 2016-03-29 09:29:04,165 schema CREATE TABLE `auth_group_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `group_id` integer NOT NULL, `permission_id` integer NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:04,201 utils (0.036) CREATE TABLE `auth_group_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `group_id` integer NOT NULL, `permission_id` integer NOT NULL); args=None
-DEBUG 2016-03-29 09:29:04,202 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_group_permissions'; args=[u'auth_group_permissions']
-DEBUG 2016-03-29 09:29:04,219 schema CREATE TABLE `auth_user` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `password` varchar(128) NOT NULL, `last_login` datetime(6) NOT NULL, `is_superuser` bool NOT NULL, `username` varchar(30) NOT NULL UNIQUE, `first_name` varchar(30) NOT NULL, `last_name` varchar(30) NOT NULL, `email` varchar(75) NOT NULL, `is_staff` bool NOT NULL, `is_active` bool NOT NULL, `date_joined` datetime(6) NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:04,265 utils (0.045) CREATE TABLE `auth_user` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `password` varchar(128) NOT NULL, `last_login` datetime(6) NOT NULL, `is_superuser` bool NOT NULL, `username` varchar(30) NOT NULL UNIQUE, `first_name` varchar(30) NOT NULL, `last_name` varchar(30) NOT NULL, `email` varchar(75) NOT NULL, `is_staff` bool NOT NULL, `is_active` bool NOT NULL, `date_joined` datetime(6) NOT NULL); args=None
-DEBUG 2016-03-29 09:29:04,266 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user'; args=[u'auth_user']
-DEBUG 2016-03-29 09:29:04,267 schema CREATE TABLE `auth_user_groups` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `group_id` integer NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:04,305 utils (0.038) CREATE TABLE `auth_user_groups` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `group_id` integer NOT NULL); args=None
-DEBUG 2016-03-29 09:29:04,306 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_groups'; args=[u'auth_user_groups']
-DEBUG 2016-03-29 09:29:04,308 schema CREATE TABLE `auth_user_user_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `permission_id` integer NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:04,341 utils (0.033) CREATE TABLE `auth_user_user_permissions` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `user_id` integer NOT NULL, `permission_id` integer NOT NULL); args=None
-DEBUG 2016-03-29 09:29:04,342 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'auth_user_user_permissions'; args=[u'auth_user_user_permissions']
-DEBUG 2016-03-29 09:29:04,343 schema ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permissi_content_type_id_2f476e4b_fk_django_content_type_id` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); (params [])
-DEBUG 2016-03-29 09:29:04,459 utils (0.116) ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permissi_content_type_id_2f476e4b_fk_django_content_type_id` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); args=[]
-DEBUG 2016-03-29 09:29:04,460 schema ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permission_content_type_id_01ab375a_uniq` UNIQUE (`content_type_id`, `codename`); (params [])
-DEBUG 2016-03-29 09:29:04,501 utils (0.041) ALTER TABLE `auth_permission` ADD CONSTRAINT `auth_permission_content_type_id_01ab375a_uniq` UNIQUE (`content_type_id`, `codename`); args=[]
-DEBUG 2016-03-29 09:29:04,501 schema ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); (params [])
-DEBUG 2016-03-29 09:29:04,594 utils (0.093) ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_b120cbf9_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); args=[]
-DEBUG 2016-03-29 09:29:04,594 schema ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissi_permission_id_84c5c92e_fk_auth_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); (params [])
-DEBUG 2016-03-29 09:29:04,692 utils (0.098) ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissi_permission_id_84c5c92e_fk_auth_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); args=[]
-DEBUG 2016-03-29 09:29:04,692 schema ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_0cd325b0_uniq` UNIQUE (`group_id`, `permission_id`); (params [])
-DEBUG 2016-03-29 09:29:04,730 utils (0.037) ALTER TABLE `auth_group_permissions` ADD CONSTRAINT `auth_group_permissions_group_id_0cd325b0_uniq` UNIQUE (`group_id`, `permission_id`); args=[]
-DEBUG 2016-03-29 09:29:04,730 schema ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_6a12ed8b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params [])
-DEBUG 2016-03-29 09:29:04,834 utils (0.104) ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_6a12ed8b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=[]
-DEBUG 2016-03-29 09:29:04,834 schema ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_group_id_97559544_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); (params [])
-DEBUG 2016-03-29 09:29:04,933 utils (0.098) ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_group_id_97559544_fk_auth_group_id` FOREIGN KEY (`group_id`) REFERENCES `auth_group` (`id`); args=[]
-DEBUG 2016-03-29 09:29:04,933 schema ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_94350c0c_uniq` UNIQUE (`user_id`, `group_id`); (params [])
-DEBUG 2016-03-29 09:29:04,974 utils (0.040) ALTER TABLE `auth_user_groups` ADD CONSTRAINT `auth_user_groups_user_id_94350c0c_uniq` UNIQUE (`user_id`, `group_id`); args=[]
-DEBUG 2016-03-29 09:29:04,974 schema ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params [])
-DEBUG 2016-03-29 09:29:06,399 utils (1.424) ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=[]
-DEBUG 2016-03-29 09:29:06,399 schema ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_perm_permission_id_1fbb5f2c_fk_auth_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); (params [])
-DEBUG 2016-03-29 09:29:06,510 utils (0.111) ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_perm_permission_id_1fbb5f2c_fk_auth_permission_id` FOREIGN KEY (`permission_id`) REFERENCES `auth_permission` (`id`); args=[]
-DEBUG 2016-03-29 09:29:06,511 schema ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_14a6b632_uniq` UNIQUE (`user_id`, `permission_id`); (params [])
-DEBUG 2016-03-29 09:29:06,548 utils (0.037) ALTER TABLE `auth_user_user_permissions` ADD CONSTRAINT `auth_user_user_permissions_user_id_14a6b632_uniq` UNIQUE (`user_id`, `permission_id`); args=[]
-DEBUG 2016-03-29 09:29:06,549 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:06,551 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0001_initial', '2016-03-29 09:29:06.550183'); args=['auth', u'0001_initial', u'2016-03-29 09:29:06.550183']
-DEBUG 2016-03-29 09:29:06,582 schema CREATE TABLE `django_admin_log` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `action_time` datetime(6) NOT NULL, `object_id` longtext NULL, `object_repr` varchar(200) NOT NULL, `action_flag` smallint UNSIGNED NOT NULL, `change_message` longtext NOT NULL, `content_type_id` integer NULL, `user_id` integer NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:06,620 utils (0.038) CREATE TABLE `django_admin_log` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `action_time` datetime(6) NOT NULL, `object_id` longtext NULL, `object_repr` varchar(200) NOT NULL, `action_flag` smallint UNSIGNED NOT NULL, `change_message` longtext NOT NULL, `content_type_id` integer NULL, `user_id` integer NOT NULL); args=None
-DEBUG 2016-03-29 09:29:06,622 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_admin_log'; args=[u'django_admin_log']
-DEBUG 2016-03-29 09:29:06,622 schema ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin__content_type_id_c4bce8eb_fk_django_content_type_id` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); (params [])
-DEBUG 2016-03-29 09:29:06,715 utils (0.093) ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin__content_type_id_c4bce8eb_fk_django_content_type_id` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`); args=[]
-DEBUG 2016-03-29 09:29:06,716 schema ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); (params [])
-DEBUG 2016-03-29 09:29:06,803 utils (0.087) ALTER TABLE `django_admin_log` ADD CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`); args=[]
-DEBUG 2016-03-29 09:29:06,804 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:06,805 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('admin', '0001_initial', '2016-03-29 09:29:06.804974'); args=['admin', u'0001_initial', u'2016-03-29 09:29:06.804974']
-DEBUG 2016-03-29 09:29:06,829 schema ALTER TABLE `django_admin_log` ALTER COLUMN `action_time` SET DEFAULT %s; (params [u'2016-03-29 09:29:06.829339'])
-DEBUG 2016-03-29 09:29:06,838 utils (0.009) ALTER TABLE `django_admin_log` ALTER COLUMN `action_time` SET DEFAULT '2016-03-29 09:29:06.829339'; args=[u'2016-03-29 09:29:06.829339']
-DEBUG 2016-03-29 09:29:06,838 schema ALTER TABLE `django_admin_log` ALTER COLUMN `action_time` DROP DEFAULT; (params [])
-DEBUG 2016-03-29 09:29:06,847 utils (0.009) ALTER TABLE `django_admin_log` ALTER COLUMN `action_time` DROP DEFAULT; args=[]
-DEBUG 2016-03-29 09:29:06,848 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:06,849 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('admin', '0002_logentry_remove_auto_add', '2016-03-29 09:29:06.848787'); args=['admin', u'0002_logentry_remove_auto_add', u'2016-03-29 09:29:06.848787']
-DEBUG 2016-03-29 09:29:06,888 schema ALTER TABLE `django_content_type` MODIFY `name` varchar(100) NULL; (params [])
-DEBUG 2016-03-29 09:29:06,950 utils (0.061) ALTER TABLE `django_content_type` MODIFY `name` varchar(100) NULL; args=[]
-DEBUG 2016-03-29 09:29:06,972 schema ALTER TABLE `django_content_type` DROP COLUMN `name` CASCADE; (params [])
-DEBUG 2016-03-29 09:29:07,046 utils (0.074) ALTER TABLE `django_content_type` DROP COLUMN `name` CASCADE; args=[]
-DEBUG 2016-03-29 09:29:07,047 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,048 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('contenttypes', '0002_remove_content_type_name', '2016-03-29 09:29:07.047884'); args=['contenttypes', u'0002_remove_content_type_name', u'2016-03-29 09:29:07.047884']
-DEBUG 2016-03-29 09:29:07,072 schema ALTER TABLE `auth_permission` MODIFY `name` varchar(255) NOT NULL; (params [])
-DEBUG 2016-03-29 09:29:07,156 utils (0.084) ALTER TABLE `auth_permission` MODIFY `name` varchar(255) NOT NULL; args=[]
-DEBUG 2016-03-29 09:29:07,157 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,158 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0002_alter_permission_name_max_length', '2016-03-29 09:29:07.158080'); args=['auth', u'0002_alter_permission_name_max_length', u'2016-03-29 09:29:07.158080']
-DEBUG 2016-03-29 09:29:07,180 schema ALTER TABLE `auth_user` MODIFY `email` varchar(254) NOT NULL; (params [])
-DEBUG 2016-03-29 09:29:07,261 utils (0.081) ALTER TABLE `auth_user` MODIFY `email` varchar(254) NOT NULL; args=[]
-DEBUG 2016-03-29 09:29:07,262 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,263 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0003_alter_user_email_max_length', '2016-03-29 09:29:07.263039'); args=['auth', u'0003_alter_user_email_max_length', u'2016-03-29 09:29:07.263039']
-DEBUG 2016-03-29 09:29:07,285 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,286 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0004_alter_user_username_opts', '2016-03-29 09:29:07.286250'); args=['auth', u'0004_alter_user_username_opts', u'2016-03-29 09:29:07.286250']
-DEBUG 2016-03-29 09:29:07,307 schema ALTER TABLE `auth_user` MODIFY `last_login` datetime(6) NULL; (params [])
-DEBUG 2016-03-29 09:29:07,361 utils (0.053) ALTER TABLE `auth_user` MODIFY `last_login` datetime(6) NULL; args=[]
-DEBUG 2016-03-29 09:29:07,362 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,363 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0005_alter_user_last_login_null', '2016-03-29 09:29:07.362564'); args=['auth', u'0005_alter_user_last_login_null', u'2016-03-29 09:29:07.362564']
-DEBUG 2016-03-29 09:29:07,369 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,370 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0006_require_contenttypes_0002', '2016-03-29 09:29:07.369615'); args=['auth', u'0006_require_contenttypes_0002', u'2016-03-29 09:29:07.369615']
-DEBUG 2016-03-29 09:29:07,394 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,395 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('auth', '0007_alter_validators_add_error_messages', '2016-03-29 09:29:07.394722'); args=['auth', u'0007_alter_validators_add_error_messages', u'2016-03-29 09:29:07.394722']
-DEBUG 2016-03-29 09:29:07,425 schema CREATE TABLE `django_session` (`session_key` varchar(40) NOT NULL PRIMARY KEY, `session_data` longtext NOT NULL, `expire_date` datetime(6) NOT NULL); (params None)
-DEBUG 2016-03-29 09:29:07,459 utils (0.033) CREATE TABLE `django_session` (`session_key` varchar(40) NOT NULL PRIMARY KEY, `session_data` longtext NOT NULL, `expire_date` datetime(6) NOT NULL); args=None
-DEBUG 2016-03-29 09:29:07,460 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'django_session'; args=[u'django_session']
-DEBUG 2016-03-29 09:29:07,460 schema CREATE INDEX `django_session_de54fa62` ON `django_session` (`expire_date`); (params [])
-DEBUG 2016-03-29 09:29:07,489 utils (0.029) CREATE INDEX `django_session_de54fa62` ON `django_session` (`expire_date`); args=[]
-DEBUG 2016-03-29 09:29:07,490 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,492 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('sessions', '0001_initial', '2016-03-29 09:29:07.491308'); args=['sessions', u'0001_initial', u'2016-03-29 09:29:07.491308']
-DEBUG 2016-03-29 09:29:07,499 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:29:07,501 utils (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:29:07,503 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
-DEBUG 2016-03-29 09:29:07,504 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
-DEBUG 2016-03-29 09:29:07,505 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('admin', 'logentry'); args=['admin', 'logentry']
-DEBUG 2016-03-29 09:29:07,516 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
-DEBUG 2016-03-29 09:29:07,517 utils (0.000) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add log entry', 1, 'add_logentry'), ('Can change log entry', 1, 'change_logentry'), ('Can delete log entry', 1, 'delete_logentry'); args=(u'Can add log entry', 1, u'add_logentry', u'Can change log entry', 1, u'change_logentry', u'Can delete log entry', 1, u'delete_logentry')
-DEBUG 2016-03-29 09:29:07,524 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
-DEBUG 2016-03-29 09:29:07,526 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
-DEBUG 2016-03-29 09:29:07,527 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
-DEBUG 2016-03-29 09:29:07,528 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('auth', 'permission'); args=['auth', 'permission']
-DEBUG 2016-03-29 09:29:07,540 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
-DEBUG 2016-03-29 09:29:07,542 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
-DEBUG 2016-03-29 09:29:07,543 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('auth', 'group'); args=['auth', 'group']
-DEBUG 2016-03-29 09:29:07,549 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
-DEBUG 2016-03-29 09:29:07,551 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
-DEBUG 2016-03-29 09:29:07,552 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('auth', 'user'); args=['auth', 'user']
-DEBUG 2016-03-29 09:29:07,563 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
-DEBUG 2016-03-29 09:29:07,566 utils (0.001) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add permission', 2, 'add_permission'), ('Can change permission', 2, 'change_permission'), ('Can delete permission', 2, 'delete_permission'), ('Can add group', 3, 'add_group'), ('Can change group', 3, 'change_group'), ('Can delete group', 3, 'delete_group'), ('Can add user', 4, 'add_user'), ('Can change user', 4, 'change_user'), ('Can delete user', 4, 'delete_user'); args=(u'Can add permission', 2, u'add_permission', u'Can change permission', 2, u'change_permission', u'Can delete permission', 2, u'delete_permission', u'Can add group', 3, u'add_group', u'Can change group', 3, u'change_group', u'Can delete group', 3, u'delete_group', u'Can add user', 4, u'add_user', u'Can change user', 4, u'change_user', u'Can delete user', 4, u'delete_user')
-DEBUG 2016-03-29 09:29:07,573 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
-DEBUG 2016-03-29 09:29:07,575 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
-DEBUG 2016-03-29 09:29:07,577 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
-DEBUG 2016-03-29 09:29:07,578 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('contenttypes', 'contenttype'); args=['contenttypes', 'contenttype']
-DEBUG 2016-03-29 09:29:07,585 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
-DEBUG 2016-03-29 09:29:07,586 utils (0.000) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add content type', 5, 'add_contenttype'), ('Can change content type', 5, 'change_contenttype'), ('Can delete content type', 5, 'delete_contenttype'); args=(u'Can add content type', 5, u'add_contenttype', u'Can change content type', 5, u'change_contenttype', u'Can delete content type', 5, u'delete_contenttype')
-DEBUG 2016-03-29 09:29:07,591 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
-DEBUG 2016-03-29 09:29:07,593 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
-DEBUG 2016-03-29 09:29:07,594 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
-DEBUG 2016-03-29 09:29:07,595 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('sessions', 'session'); args=['sessions', 'session']
-DEBUG 2016-03-29 09:29:07,601 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
-DEBUG 2016-03-29 09:29:07,603 utils (0.000) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add session', 6, 'add_session'), ('Can change session', 6, 'change_session'), ('Can delete session', 6, 'delete_session'); args=(u'Can add session', 6, u'add_session', u'Can change session', 6, u'change_session', u'Can delete session', 6, u'delete_session')
-DEBUG 2016-03-29 09:29:07,608 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
-DEBUG 2016-03-29 09:29:07,609 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
-DEBUG 2016-03-29 09:29:07,610 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
-DEBUG 2016-03-29 09:29:07,611 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('portal', 'service'); args=['portal', 'service']
-DEBUG 2016-03-29 09:29:07,617 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
-DEBUG 2016-03-29 09:29:07,618 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
-DEBUG 2016-03-29 09:29:07,619 utils (0.000) INSERT INTO `django_content_type` (`app_label`, `model`) VALUES ('portal', 'user'); args=['portal', 'user']
-DEBUG 2016-03-29 09:29:07,625 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
-DEBUG 2016-03-29 09:29:07,627 utils (0.000) INSERT INTO `auth_permission` (`name`, `content_type_id`, `codename`) VALUES ('Can add service', 7, 'add_service'), ('Can change service', 7, 'change_service'), ('Can delete service', 7, 'delete_service'), ('Can add user', 8, 'add_user'), ('Can change user', 8, 'change_user'), ('Can delete user', 8, 'delete_user'); args=(u'Can add service', 7, u'add_service', u'Can change service', 7, u'change_service', u'Can delete service', 7, u'delete_service', u'Can add user', 8, u'add_user', u'Can change user', 8, u'change_user', u'Can delete user', 8, u'delete_user')
-DEBUG 2016-03-29 09:29:07,632 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'portal'; args=('portal',)
-DEBUG 2016-03-29 09:42:22,758 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:42:22,782 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:42:22,783 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:42:22,785 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:42:22,787 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:42:22,788 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:42:22,844 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
-DEBUG 2016-03-29 09:42:22,847 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
-DEBUG 2016-03-29 09:42:22,848 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
-DEBUG 2016-03-29 09:42:22,850 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
-DEBUG 2016-03-29 09:42:22,851 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
-DEBUG 2016-03-29 09:42:22,855 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
-DEBUG 2016-03-29 09:42:22,859 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
-DEBUG 2016-03-29 09:42:22,861 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
-DEBUG 2016-03-29 09:42:22,863 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
-DEBUG 2016-03-29 09:42:22,866 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
-DEBUG 2016-03-29 09:42:22,868 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
-DEBUG 2016-03-29 09:42:22,870 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
-DEBUG 2016-03-29 09:42:22,873 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
-DEBUG 2016-03-29 09:42:22,874 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
-DEBUG 2016-03-29 09:42:22,876 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
-DEBUG 2016-03-29 09:42:22,879 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
-DEBUG 2016-03-29 09:42:22,881 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
-DEBUG 2016-03-29 09:42:22,883 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'portal'; args=('portal',)
-DEBUG 2016-03-29 09:42:52,408 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:43:31,881 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:43:31,906 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:43:31,907 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:43:31,910 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:43:31,912 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:43:31,913 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:43:31,969 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
-DEBUG 2016-03-29 09:43:31,972 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
-DEBUG 2016-03-29 09:43:31,973 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
-DEBUG 2016-03-29 09:43:31,974 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
-DEBUG 2016-03-29 09:43:31,976 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
-DEBUG 2016-03-29 09:43:31,978 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
-DEBUG 2016-03-29 09:43:31,980 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
-DEBUG 2016-03-29 09:43:31,981 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
-DEBUG 2016-03-29 09:43:31,983 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
-DEBUG 2016-03-29 09:43:31,985 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
-DEBUG 2016-03-29 09:43:31,986 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
-DEBUG 2016-03-29 09:43:31,988 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
-DEBUG 2016-03-29 09:43:31,990 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
-DEBUG 2016-03-29 09:43:31,991 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
-DEBUG 2016-03-29 09:43:31,993 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
-DEBUG 2016-03-29 09:43:31,994 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
-DEBUG 2016-03-29 09:43:31,996 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
-DEBUG 2016-03-29 09:43:31,997 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'portal'; args=('portal',)
-DEBUG 2016-03-29 09:46:46,311 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:47:34,728 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:49:30,118 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:49:50,991 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:49:51,014 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:49:51,015 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:49:51,017 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:49:51,019 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:49:51,020 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:49:51,077 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
-DEBUG 2016-03-29 09:49:51,080 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
-DEBUG 2016-03-29 09:49:51,081 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
-DEBUG 2016-03-29 09:49:51,083 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
-DEBUG 2016-03-29 09:49:51,084 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
-DEBUG 2016-03-29 09:49:51,085 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
-DEBUG 2016-03-29 09:49:51,088 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
-DEBUG 2016-03-29 09:49:51,089 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
-DEBUG 2016-03-29 09:49:51,091 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
-DEBUG 2016-03-29 09:49:51,093 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
-DEBUG 2016-03-29 09:49:51,094 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
-DEBUG 2016-03-29 09:49:51,096 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
-DEBUG 2016-03-29 09:49:51,098 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
-DEBUG 2016-03-29 09:49:51,099 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
-DEBUG 2016-03-29 09:49:51,101 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
-DEBUG 2016-03-29 09:49:51,102 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
-DEBUG 2016-03-29 09:49:51,104 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
-DEBUG 2016-03-29 09:49:51,106 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'portal'; args=('portal',)
-DEBUG 2016-03-29 09:50:04,072 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:50:04,098 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:50:04,098 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:50:04,101 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:50:30,678 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:50:30,702 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:50:30,702 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:50:30,705 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:50:30,706 utils (0.000) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:50:30,707 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:50:30,762 utils (0.001) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
-DEBUG 2016-03-29 09:50:30,765 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
-DEBUG 2016-03-29 09:50:30,766 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
-DEBUG 2016-03-29 09:50:30,767 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
-DEBUG 2016-03-29 09:50:30,769 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
-DEBUG 2016-03-29 09:50:30,770 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
-DEBUG 2016-03-29 09:50:30,773 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
-DEBUG 2016-03-29 09:50:30,774 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
-DEBUG 2016-03-29 09:50:30,776 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
-DEBUG 2016-03-29 09:50:30,778 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
-DEBUG 2016-03-29 09:50:30,779 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
-DEBUG 2016-03-29 09:50:30,780 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
-DEBUG 2016-03-29 09:50:30,783 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
-DEBUG 2016-03-29 09:50:30,784 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
-DEBUG 2016-03-29 09:50:30,785 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
-DEBUG 2016-03-29 09:50:30,787 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
-DEBUG 2016-03-29 09:50:30,789 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
-DEBUG 2016-03-29 09:50:30,790 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'portal'; args=('portal',)
-DEBUG 2016-03-29 09:50:56,780 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:51:05,770 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:51:05,794 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
-DEBUG 2016-03-29 09:51:05,795 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:51:05,798 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:51:05,819 schema CREATE TABLE `portal_service` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `service_name` varchar(256) NULL); (params None)
-DEBUG 2016-03-29 09:51:05,898 utils (0.079) CREATE TABLE `portal_service` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `service_name` varchar(256) NULL); args=None
-DEBUG 2016-03-29 09:51:05,900 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'portal_service'; args=[u'portal_service']
-DEBUG 2016-03-29 09:51:05,912 schema CREATE TABLE `portal_user` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(127) NULL, `mobile` varchar(13) NULL, `email` varchar(64) NULL, `sex` varchar(4) NULL, `province` varchar(256) NULL, `city` varchar(256) NULL, `service_id` integer NOT NULL); (params None)
-DEBUG 2016-03-29 09:51:05,963 utils (0.051) CREATE TABLE `portal_user` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `name` varchar(127) NULL, `mobile` varchar(13) NULL, `email` varchar(64) NULL, `sex` varchar(4) NULL, `province` varchar(256) NULL, `city` varchar(256) NULL, `service_id` integer NOT NULL); args=None
-DEBUG 2016-03-29 09:51:05,964 utils (0.001) SELECT engine FROM information_schema.tables WHERE table_name = 'portal_user'; args=[u'portal_user']
-DEBUG 2016-03-29 09:51:05,964 schema ALTER TABLE `portal_user` ADD CONSTRAINT `portal_user_service_id_2ecc47d5_fk_portal_service_id` FOREIGN KEY (`service_id`) REFERENCES `portal_service` (`id`); (params [])
-DEBUG 2016-03-29 09:51:06,073 utils (0.109) ALTER TABLE `portal_user` ADD CONSTRAINT `portal_user_service_id_2ecc47d5_fk_portal_service_id` FOREIGN KEY (`service_id`) REFERENCES `portal_service` (`id`); args=[]
-DEBUG 2016-03-29 09:51:06,074 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:51:06,076 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('portal', '0001_initial', '2016-03-29 09:51:06.075220'); args=['portal', u'0001_initial', u'2016-03-29 09:51:06.075220']
-DEBUG 2016-03-29 09:51:06,081 utils (0.001) SHOW FULL TABLES; args=None
-DEBUG 2016-03-29 09:51:06,082 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
-DEBUG 2016-03-29 09:51:06,084 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
-DEBUG 2016-03-29 09:51:06,089 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
-DEBUG 2016-03-29 09:51:06,090 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
-DEBUG 2016-03-29 09:51:06,092 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
-DEBUG 2016-03-29 09:51:06,093 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
-DEBUG 2016-03-29 09:51:06,094 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
-DEBUG 2016-03-29 09:51:06,097 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
-DEBUG 2016-03-29 09:51:06,098 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
-DEBUG 2016-03-29 09:51:06,100 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
-DEBUG 2016-03-29 09:51:06,102 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
-DEBUG 2016-03-29 09:51:06,103 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
-DEBUG 2016-03-29 09:51:06,105 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
-DEBUG 2016-03-29 09:51:06,107 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
-DEBUG 2016-03-29 09:51:06,108 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
-DEBUG 2016-03-29 09:51:06,110 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
-DEBUG 2016-03-29 09:51:06,111 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
-DEBUG 2016-03-29 09:51:06,114 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
-DEBUG 2016-03-29 09:51:06,115 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'portal'; args=('portal',)
+DEBUG 2016-03-31 07:02:47,830 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:03:05,317 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:03:05,344 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:03:05,345 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:03:05,347 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 07:03:05,376 utils (0.001) 
+            SELECT kc.`constraint_name`, kc.`column_name`,
+                kc.`referenced_table_name`, kc.`referenced_column_name`
+            FROM information_schema.key_column_usage AS kc
+            WHERE
+                kc.table_schema = 'benz' AND
+                kc.table_name = 'portal_user'
+        ; args=['benz', u'portal_user']
+DEBUG 2016-03-31 07:03:05,377 utils (0.001) 
+            SELECT c.constraint_name, c.constraint_type
+            FROM information_schema.table_constraints AS c
+            WHERE
+                c.table_schema = 'benz' AND
+                c.table_name = 'portal_user'
+        ; args=['benz', u'portal_user']
+DEBUG 2016-03-31 07:03:05,378 utils (0.000) SHOW INDEX FROM `portal_user`; args=None
+DEBUG 2016-03-31 07:03:05,378 schema ALTER TABLE `portal_user` DROP FOREIGN KEY `portal_user_service_id_2ecc47d5_fk_portal_service_id`; (params [])
+DEBUG 2016-03-31 07:03:05,786 utils (0.408) ALTER TABLE `portal_user` DROP FOREIGN KEY `portal_user_service_id_2ecc47d5_fk_portal_service_id`; args=[]
+DEBUG 2016-03-31 07:03:05,787 schema ALTER TABLE `portal_user` DROP COLUMN `service_id` CASCADE; (params [])
+DEBUG 2016-03-31 07:03:05,889 utils (0.102) ALTER TABLE `portal_user` DROP COLUMN `service_id` CASCADE; args=[]
+DEBUG 2016-03-31 07:03:05,897 schema ALTER TABLE `portal_user` ADD COLUMN `service_name` varchar(256) NULL; (params [])
+DEBUG 2016-03-31 07:03:05,957 utils (0.060) ALTER TABLE `portal_user` ADD COLUMN `service_name` varchar(256) NULL; args=[]
+DEBUG 2016-03-31 07:03:05,958 schema ALTER TABLE `portal_user` ALTER COLUMN `service_name` DROP DEFAULT; (params [])
+DEBUG 2016-03-31 07:03:05,966 utils (0.008) ALTER TABLE `portal_user` ALTER COLUMN `service_name` DROP DEFAULT; args=[]
+DEBUG 2016-03-31 07:03:05,967 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:03:05,968 utils (0.000) INSERT INTO `django_migrations` (`app`, `name`, `applied`) VALUES ('portal', '0002_auto_20160331_0702', '2016-03-31 07:03:05.967964'); args=['portal', u'0002_auto_20160331_0702', u'2016-03-31 07:03:05.967964']
+DEBUG 2016-03-31 07:03:05,985 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:03:05,986 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 07:03:05,988 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'logentry' AND `django_content_type`.`app_label` = 'admin'); args=('logentry', 'admin')
+DEBUG 2016-03-31 07:03:05,992 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (1) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(1,)
+DEBUG 2016-03-31 07:03:05,993 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'admin'; args=('admin',)
+DEBUG 2016-03-31 07:03:05,995 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'permission' AND `django_content_type`.`app_label` = 'auth'); args=('permission', 'auth')
+DEBUG 2016-03-31 07:03:05,996 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'group' AND `django_content_type`.`app_label` = 'auth'); args=('group', 'auth')
+DEBUG 2016-03-31 07:03:05,998 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'auth'); args=('user', 'auth')
+DEBUG 2016-03-31 07:03:06,001 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (2, 3, 4) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(2, 3, 4)
+DEBUG 2016-03-31 07:03:06,002 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'auth'; args=('auth',)
+DEBUG 2016-03-31 07:03:06,003 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'contenttype' AND `django_content_type`.`app_label` = 'contenttypes'); args=('contenttype', 'contenttypes')
+DEBUG 2016-03-31 07:03:06,006 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (5) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(5,)
+DEBUG 2016-03-31 07:03:06,007 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'contenttypes'; args=('contenttypes',)
+DEBUG 2016-03-31 07:03:06,008 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'session' AND `django_content_type`.`app_label` = 'sessions'); args=('session', 'sessions')
+DEBUG 2016-03-31 07:03:06,011 utils (0.000) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (6) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(6,)
+DEBUG 2016-03-31 07:03:06,012 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'sessions'; args=('sessions',)
+DEBUG 2016-03-31 07:03:06,014 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'service' AND `django_content_type`.`app_label` = 'portal'); args=('service', 'portal')
+DEBUG 2016-03-31 07:03:06,015 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE (`django_content_type`.`model` = 'user' AND `django_content_type`.`app_label` = 'portal'); args=('user', 'portal')
+DEBUG 2016-03-31 07:03:06,017 utils (0.001) SELECT `auth_permission`.`content_type_id`, `auth_permission`.`codename` FROM `auth_permission` INNER JOIN `django_content_type` ON (`auth_permission`.`content_type_id` = `django_content_type`.`id`) WHERE `auth_permission`.`content_type_id` IN (8, 7) ORDER BY `django_content_type`.`app_label` ASC, `django_content_type`.`model` ASC, `auth_permission`.`codename` ASC; args=(8, 7)
+DEBUG 2016-03-31 07:03:06,019 utils (0.000) SELECT `django_content_type`.`id`, `django_content_type`.`app_label`, `django_content_type`.`model` FROM `django_content_type` WHERE `django_content_type`.`app_label` = 'portal'; args=('portal',)
+DEBUG 2016-03-31 07:14:07,607 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:14:07,657 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:14:07,659 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:14:07,663 utils (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 07:26:21,817 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:26:21,866 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:26:21,867 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:26:21,870 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 07:27:39,580 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:27:39,634 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:27:39,636 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:27:39,640 utils (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 07:27:42,658 base Not Found: /portal/submit
+DEBUG 2016-03-31 07:27:42,662 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+ERROR 2016-03-31 07:27:42,664 base Internal Server Error: /portal/submit
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 114, in process_response
+    if self.should_redirect_with_slash(request):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 79, in should_redirect_with_slash
+    and urlresolvers.is_valid_path('%s/' % request.path_info, urlconf)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 668, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 534, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 376, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 248, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 136, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import 'portal.view.submit'. View does not exist in module portal.view.
+DEBUG 2016-03-31 07:28:38,137 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:28:38,185 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:28:38,186 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:28:38,189 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 07:28:40,712 base Not Found: /portal/submit
+DEBUG 2016-03-31 07:28:40,716 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+ERROR 2016-03-31 07:28:40,722 base Internal Server Error: /portal/submit
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 114, in process_response
+    if self.should_redirect_with_slash(request):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 79, in should_redirect_with_slash
+    and urlresolvers.is_valid_path('%s/' % request.path_info, urlconf)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 668, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 534, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 376, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 248, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/benz/portal/views.py", line 11, in <module>
+    from plugin import *
+  File "/home/benz/portal/plugin.py", line 6, in <module>
+    import requests
+ImportError: No module named requests
+DEBUG 2016-03-31 07:29:08,527 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:29:08,577 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:29:08,578 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:29:08,581 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 07:29:10,044 base Not Found: /portal/submit
+DEBUG 2016-03-31 07:29:10,049 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+ERROR 2016-03-31 07:29:10,094 base Internal Server Error: /portal/submit
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 115, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/portal/submit/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING 2016-03-31 07:32:16,843 base Not Found: /portal/submit
+DEBUG 2016-03-31 07:32:16,847 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+ERROR 2016-03-31 07:32:16,848 base Internal Server Error: /portal/submit
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 115, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/portal/submit/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+DEBUG 2016-03-31 07:32:51,047 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:32:51,096 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:32:51,098 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:32:51,101 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 07:33:16,222 csrf Forbidden (CSRF cookie not set.): /portal/submit/
+DEBUG 2016-03-31 07:33:54,690 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:33:54,736 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:33:54,738 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 07:33:54,740 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 07:33:57,868 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:33:57,870 utils (0.000) INSERT INTO `portal_user` (`name`, `mobile`, `email`, `sex`, `province`, `city`, `service_name`) VALUES ('sf', '1232221112', 'fdsf', '1', '2', NULL, '南宁恒信之星'); args=[u'sf', u'1232221112', u'fdsf', u'1', u'2', None, u'\u5357\u5b81\u6052\u4fe1\u4e4b\u661f']
+ERROR 2016-03-31 07:33:57,870 base Internal Server Error: /portal/submit/
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/benz/portal/views.py", line 59, in submit
+    u.save()
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 700, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 728, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 812, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/models/base.py", line 851, in _do_insert
+    using=using, raw=raw)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/models/query.py", line 1039, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/models/sql/compiler.py", line 1060, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/utils.py", line 95, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/db/backends/mysql/base.py", line 112, in execute
+    return self.cursor.execute(query, args)
+  File "/home/benz/venv/lib/python2.7/site-packages/MySQLdb/cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "/home/benz/venv/lib/python2.7/site-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xE5\\x8D\\x97\\xE5\\xAE\\x81...' for column 'service_name' at row 1")
+DEBUG 2016-03-31 07:33:57,918 utils (0.000) SELECT `portal_user`.`id`, `portal_user`.`name`, `portal_user`.`mobile`, `portal_user`.`email`, `portal_user`.`sex`, `portal_user`.`province`, `portal_user`.`city`, `portal_user`.`service_name` FROM `portal_user` LIMIT 21; args=()
+DEBUG 2016-03-31 07:34:45,515 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 07:34:45,516 utils (0.000) INSERT INTO `portal_user` (`name`, `mobile`, `email`, `sex`, `province`, `city`, `service_name`) VALUES ('sf', '1232221112', 'fdsf', '1', '2', NULL, '南宁恒信之星'); args=[u'sf', u'1232221112', u'fdsf', u'1', u'2', None, u'\u5357\u5b81\u6052\u4fe1\u4e4b\u661f']
