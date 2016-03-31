@@ -8,4 +8,5 @@ urlpatterns = [
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^portal/submit/', 'portal.views.submit'),
+    url(r'^portal/inexc/', 'portal.views.inexc'),
 ]

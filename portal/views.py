@@ -15,7 +15,8 @@ from functools import wraps
 import sys
 import re
 import math
-
+import random
+import xlrd
 reload(sys)
 sys.setdefaultencoding('UTF-8')
 
@@ -57,6 +58,19 @@ def submit(request):
     service = post_params(request, "mall")
     u = User(name=name, sex=sex, mobile=mobile, email=email, province=province, service_name=service)
     u.save()
+    return JsonResponse({
+        "error_no": 0
+    })
+
+def inexc(request):
+    data = xlrd.open_workbook('./excelFile.xlsx')
+    table = data.sheets()[0]
+    cols = table.col_values(1)
+
+    for i in cols:
+        p = random.randint(100000,999999);
+        b = BackUser(service_name=i,password=p)
+        b.save()
     return JsonResponse({
         "error_no": 0
     })
