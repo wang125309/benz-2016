@@ -5,10 +5,10 @@ $(function(){
 		wx.config(data);
         var share = function() {
             shareJson = {
-                link:"http://200703.qingdianer.com",
-                imgUrl:"http://200703.qingdianer.com/static/image/invite-logo.png",
-                title:"2007级三班聚会邀请函",
-                desc:"亲爱的同学们，在我们阔别了9年之后，让我们再次重逢吧~"
+                link:"http://benz.importos.com",
+                imgUrl:"http://benz.importos.com/static/image/share-little-icon.jpg",
+                title:"天地既征途-2016 梅赛德斯-奔驰南区SUV征服之旅",
+                desc:"天地即征途——2016 梅赛德斯-奔驰SUV 即将在万众瞩目中强势来袭，作为南区该活动的前奏预热，将在南区10 大城市全线倾情展开梅赛德斯-奔驰南区SUV 征服之旅"
             };
 			wx.onMenuShareTimeline(shareJson);
 			wx.onMenuShareAppMessage(shareJson);
