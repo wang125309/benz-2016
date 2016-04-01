@@ -1,17 +1,26 @@
 require("../../bower_components/zepto/zepto.js");
+require("../../bower_components/angular/angular.js");
 
-window.onload = function() {
-    $("#submit").on("click",function(){
-        $.post("/portal/login/",{
-            "uname":$("#uname").val(),
-            "upwd":$("#upwd").val()
-        },function(data){
-            if(data.error_no == '0') {
-                location.href = '/backend.html'
+backendCtrl = angular.module('app',[]).controller('backendCtrl',['$scope',function($scope){
+    var refrash = function() {
+        $.get("/portal/backend/",function(data){
+            if(data.error_no == '1') {
+                location.href = '/login.html';
             }
             else {
-                alert(data.data.message);
+                $scope.data = data.data;
+                $scope.$apply();
             }
         });
-    }) ;
-}
+    };
+    refrash();
+    $scope.download = function() {
+        $.get("/portal/download/",function(data){
+            if(data.error_no == '0') {
+                location.href = data.file;
+            }
+        });
+    };
+}]);
+
+backendCtrl.$inject = ['$scope','backendCtrl'];

@@ -1,7 +1,6 @@
 $(function(){
     $.post("/portal/wxconfig/",{
 		"url":location.href,
-        "debug":1
 	},function(data){
 		wx.config(data);
         var share = function() {

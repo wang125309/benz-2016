@@ -1,15 +1,15 @@
 doctype html
-html(lang="en")
+html(lang="en",ng-app="app")
     head
         title= "梅赛德斯奔驰"
         meta(name="viewport",content="width=device-width,user-scalable=no")
         meta(http-equiv="Content-Type",content="text/html",charset="utf-8")
-        link(href="/static/css/login.css",rel="stylesheet",type="text/css")
-        script(src="/static/js/login.js",language="javascript")
-    body
+        link(href="/static/css/backend.css",rel="stylesheet",type="text/css")
+        script(src="/static/js/backend.js",language="javascript")
+    body(ng-controller="backendCtrl")
         div.container
-            button.btn 下载信息
-            table
+            button.btn.btn-primary(style="margin-top:20px",ng-click="download()") 下载信息
+            table.table.table-striped
                 tr
                     th id
                     th 姓名
