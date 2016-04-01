@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        title= "梅赛德斯奔驰"
+        meta(name="viewport",content="width=device-width,user-scalable=no")
+        meta(http-equiv="Content-Type",content="text/html",charset="utf-8")
+        link(href="/static/css/login.css",rel="stylesheet",type="text/css")
+        script(src="/static/js/login.js",language="javascript")
+    body
+        div.container
+            button.btn 下载信息
+            table
+                tr
+                    th id
+                    th 姓名
+                    th 手机号
+                    th Email
+                    th 性别
+                    th 供应商
+                tr(ng-repeat="i in data")
+                    td {{ i.id }}
+                    td {{ i.name }}
+                    td {{ i.mobile }}
+                    td {{ i.sex }}
+                    td {{ i.service_name }}

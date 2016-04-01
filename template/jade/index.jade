@@ -112,15 +112,22 @@ html(lang="en")
         - for(var i = 1; i<=8; ++i) {
         div(class="city#{i} swiper-container")
             div.nav=""
-            div.logo=""
-            div.music=""
-            div.share=""
+                div.logo=""
+                div.music=""
+                div.share=""
             div.title=""
             div.button-area
                 div.back(data-index="#{i}")=""
                 div.ask=""
                 div.car-icon=""
         - }       
-         
+        div(class="city submit-success")
+            div.nav=""
+            div.logo=""
+            div.music=""
+            div.share=""
+            div.button-area
+                div.car-icon=""
+        div.share-text="" 
         script(language="javascript",src="/static/js/index.js")
 

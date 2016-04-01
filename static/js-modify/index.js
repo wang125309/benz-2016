@@ -58,7 +58,8 @@ window.onload = function() {
     loadImage('/static/image/car2.jpg');
     $("#audio").attr({"src":"/static/image/background.mp3"});
     $("#audio")[0].play();
-    $(".music").on("click",function(){
+    on = true;
+    $(".music").on("tap",function(){
         if(on) {
             on = false;
             document.getElementById("audio").pause();
@@ -234,9 +235,17 @@ work = function(){
             return 1;
         }
     }
+    $(".share").on("tap",function(){
+        $(".share-text").velocity("fadeIn");
+    });
+    $(".share-text").on("tap",function(){
+        $(this).velocity("fadeOut");
+    });
     var submit_success = function() {
-
+        $(".submit-success").velocity("fadeIn");
+        $(".background").velocity("fadeOut");
     };
+
     $("#submit").on("tap",function(){
         checked = check();
         if(checked) {
