@@ -466,3 +466,221 @@ DEBUG 2016-03-31 11:22:24,222 utils (0.000) INSERT INTO `portal_backuser` (`serv
 DEBUG 2016-03-31 11:22:24,228 utils (0.000) INSERT INTO `portal_backuser` (`service_name`, `password`) VALUES ('东莞溢华（长安店）', '289697'); args=[u'\u4e1c\u839e\u6ea2\u534e\uff08\u957f\u5b89\u5e97\uff09', u'289697']
 DEBUG 2016-03-31 11:22:24,233 utils (0.000) INSERT INTO `portal_backuser` (`service_name`, `password`) VALUES ('寮步仁孚', '460752'); args=[u'\u5bee\u6b65\u4ec1\u5b5a', u'460752']
 DEBUG 2016-03-31 11:22:24,238 utils (0.000) INSERT INTO `portal_backuser` (`service_name`, `password`) VALUES ('中升奔驰厚街店', '700586'); args=[u'\u4e2d\u5347\u5954\u9a70\u539a\u8857\u5e97', u'700586']
+DEBUG 2016-03-31 12:01:06,015 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:01:06,068 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:01:06,069 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 12:01:06,074 utils (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 12:01:08,761 base Not Found: /portal/login
+DEBUG 2016-03-31 12:01:08,767 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+ERROR 2016-03-31 12:01:08,769 base Internal Server Error: /portal/login
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 114, in process_response
+    if self.should_redirect_with_slash(request):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 79, in should_redirect_with_slash
+    and urlresolvers.is_valid_path('%s/' % request.path_info, urlconf)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 668, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 534, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 376, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 248, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 255, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/utils/lru_cache.py", line 100, in wrapper
+    result = user_function(*args, **kwds)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/urlresolvers.py", line 115, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/lib64/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/benz/portal/views.py", line 99
+    "data":{
+          ^
+SyntaxError: invalid syntax
+DEBUG 2016-03-31 12:01:36,287 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:01:36,336 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:01:36,337 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 12:01:36,340 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 12:01:38,809 base Not Found: /portal/login
+DEBUG 2016-03-31 12:01:38,813 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+ERROR 2016-03-31 12:01:38,892 base Internal Server Error: /portal/login
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 115, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/portal/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+DEBUG 2016-03-31 12:02:55,603 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:02:55,647 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:02:55,648 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 12:02:55,651 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 12:03:24,059 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:03:24,111 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:03:24,112 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 12:03:24,116 utils (0.001) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 12:03:25,757 base Not Found: /portal/login
+DEBUG 2016-03-31 12:03:25,761 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+ERROR 2016-03-31 12:03:25,841 base Internal Server Error: /portal/login
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 115, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/benz/venv/lib/python2.7/site-packages/django/middleware/common.py", line 99, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/portal/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+DEBUG 2016-03-31 12:03:47,141 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:03:47,142 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:03:47,143 utils (0.001) SELECT `portal_backuser`.`id`, `portal_backuser`.`service_name`, `portal_backuser`.`password` FROM `portal_backuser` WHERE `portal_backuser`.`service_name` = '南宁恒信之星'; args=(u'\u5357\u5b81\u6052\u4fe1\u4e4b\u661f',)
+DEBUG 2016-03-31 12:04:11,194 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:11,254 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:11,255 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 12:04:11,259 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+WARNING 2016-03-31 12:04:25,435 base Not Found: /portal/download
+DEBUG 2016-03-31 12:04:25,440 base Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+DEBUG 2016-03-31 12:04:25,552 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:25,554 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:25,555 utils (0.001) SELECT `portal_user`.`id`, `portal_user`.`name`, `portal_user`.`mobile`, `portal_user`.`email`, `portal_user`.`sex`, `portal_user`.`province`, `portal_user`.`city`, `portal_user`.`service_name` FROM `portal_user` WHERE `portal_user`.`service_name` = '南宁恒信之星'; args=(u'\u5357\u5b81\u6052\u4fe1\u4e4b\u661f',)
+ERROR 2016-03-31 12:04:25,559 base Internal Server Error: /portal/download/
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/benz/portal/views.py", line 118, in download
+    f.save("static/data/"+request.session['BKUSER']+".xls")
+  File "/home/benz/venv/lib/python2.7/site-packages/xlwt/Workbook.py", line 696, in save
+    doc.save(filename_or_stream, self.get_biff_data())
+  File "/home/benz/venv/lib/python2.7/site-packages/xlwt/CompoundDoc.py", line 262, in save
+    f = open(file_name_or_filelike_obj, 'w+b')
+IOError: [Errno 2] No such file or directory: u'static/data/\u5357\u5b81\u6052\u4fe1\u4e4b\u661f.xls'
+DEBUG 2016-03-31 12:04:51,410 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:51,458 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:51,459 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 12:04:51,462 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 12:04:52,770 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:52,772 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:04:52,773 utils (0.001) SELECT `portal_user`.`id`, `portal_user`.`name`, `portal_user`.`mobile`, `portal_user`.`email`, `portal_user`.`sex`, `portal_user`.`province`, `portal_user`.`city`, `portal_user`.`service_name` FROM `portal_user` WHERE `portal_user`.`service_name` = '南宁恒信之星'; args=(u'\u5357\u5b81\u6052\u4fe1\u4e4b\u661f',)
+DEBUG 2016-03-31 12:06:32,058 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:06:32,110 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:06:32,112 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-03-31 12:06:32,115 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+DEBUG 2016-03-31 12:06:38,674 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:06:38,675 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-03-31 12:06:38,676 utils (0.000) SELECT `portal_user`.`id`, `portal_user`.`name`, `portal_user`.`mobile`, `portal_user`.`email`, `portal_user`.`sex`, `portal_user`.`province`, `portal_user`.`city`, `portal_user`.`service_name` FROM `portal_user` WHERE `portal_user`.`service_name` = '南宁恒信之星'; args=(u'\u5357\u5b81\u6052\u4fe1\u4e4b\u661f',)
+DEBUG 2016-04-01 04:57:30,937 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 04:57:30,991 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 04:57:30,993 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-04-01 04:57:30,996 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+ERROR 2016-04-01 04:57:49,046 base Internal Server Error: /portal/update_access_token/
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/benz/portal/views.py", line 47, in update_access_token
+    get_js_ticket(get_access_token(appid, secret), appid, secret)
+  File "/home/benz/portal/plugin.py", line 33, in get_access_token
+    cache.set("access_token", res['access_token'], settings.NEVER_REDIS_TIMEOUT)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/cache/__init__.py", line 98, in __getattr__
+    return getattr(caches[DEFAULT_CACHE_ALIAS], name)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/cache/__init__.py", line 80, in __getitem__
+    cache = _create_cache(alias)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/cache/__init__.py", line 54, in _create_cache
+    "Could not find backend '%s': %s" % (backend, e))
+InvalidCacheBackendError: Could not find backend 'redis_cache.RedisCache': No module named redis_cache
+DEBUG 2016-04-01 04:58:52,339 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 04:58:52,403 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 04:58:52,404 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-04-01 04:58:52,408 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+ERROR 2016-04-01 04:58:53,523 base Internal Server Error: /portal/update_access_token/
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/benz/portal/views.py", line 47, in update_access_token
+    get_js_ticket(get_access_token(appid, secret), appid, secret)
+  File "/home/benz/portal/plugin.py", line 33, in get_access_token
+    cache.set("access_token", res['access_token'], settings.NEVER_REDIS_TIMEOUT)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis_cache/backends/base.py", line 32, in wrapped
+    return method(self, client, key, *args, **kwargs)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis_cache/backends/base.py", line 282, in set
+    result = self._set(client, key, self.prep_value(value), timeout, _add_only=False)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis_cache/backends/base.py", line 272, in _set
+    return client.setex(key, value, timeout)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/client.py", line 2014, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 446, in connect
+    self.on_connect()
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 514, in on_connect
+    if nativestr(self.read_response()) != 'OK':
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 582, in read_response
+    raise response
+ResponseError: invalid password
+DEBUG 2016-04-01 05:00:09,542 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 05:00:09,592 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 05:00:09,594 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-04-01 05:00:09,597 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+ERROR 2016-04-01 05:00:10,749 base Internal Server Error: /portal/update_access_token/
+Traceback (most recent call last):
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/benz/venv/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/benz/portal/views.py", line 47, in update_access_token
+    get_js_ticket(get_access_token(appid, secret), appid, secret)
+  File "/home/benz/portal/plugin.py", line 33, in get_access_token
+    cache.set("access_token", res['access_token'], settings.NEVER_REDIS_TIMEOUT)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis_cache/backends/base.py", line 32, in wrapped
+    return method(self, client, key, *args, **kwargs)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis_cache/backends/base.py", line 282, in set
+    result = self._set(client, key, self.prep_value(value), timeout, _add_only=False)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis_cache/backends/base.py", line 272, in _set
+    return client.setex(key, value, timeout)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/client.py", line 2014, in setex
+    return self.execute_command('SETEX', name, time, value)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/client.py", line 572, in execute_command
+    connection.send_command(*args)
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 563, in send_command
+    self.send_packed_command(self.pack_command(*args))
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 538, in send_packed_command
+    self.connect()
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 446, in connect
+    self.on_connect()
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 514, in on_connect
+    if nativestr(self.read_response()) != 'OK':
+  File "/home/benz/venv/lib/python2.7/site-packages/redis/connection.py", line 582, in read_response
+    raise response
+ResponseError: invalid password
+DEBUG 2016-04-01 05:00:39,042 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 05:00:39,092 utils (0.000) SET SQL_AUTO_IS_NULL = 0; args=None
+DEBUG 2016-04-01 05:00:39,093 utils (0.001) SHOW FULL TABLES; args=None
+DEBUG 2016-04-01 05:00:39,096 utils (0.000) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

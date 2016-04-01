@@ -84,7 +84,7 @@ CACHES = {
         'OPTIONS': {
             'CLIENT_CLASS':'redis_cache.client.DefaultClient',
             'DB':0,
-            'PASSWORD':'nameLR9969',
+            'PASSWORD':'nameLR9959',
         },
     },
 }

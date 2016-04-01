@@ -1,0 +1,10 @@
+INFO 2016-04-01 04:57:48,886 connectionpool Starting new HTTPS connection (1): api.weixin.qq.com
+DEBUG 2016-04-01 04:57:49,043 connectionpool "GET /cgi-bin/token?grant_type=client_credential&appid=wxd4f684d8f3edc620&secret=5b361b69fb998e0db1be2d873ed85326 HTTP/1.1" 200 175
+INFO 2016-04-01 04:58:53,370 connectionpool Starting new HTTPS connection (1): api.weixin.qq.com
+DEBUG 2016-04-01 04:58:53,517 connectionpool "GET /cgi-bin/token?grant_type=client_credential&appid=wxd4f684d8f3edc620&secret=5b361b69fb998e0db1be2d873ed85326 HTTP/1.1" 200 175
+INFO 2016-04-01 05:00:10,594 connectionpool Starting new HTTPS connection (1): api.weixin.qq.com
+DEBUG 2016-04-01 05:00:10,740 connectionpool "GET /cgi-bin/token?grant_type=client_credential&appid=wxd4f684d8f3edc620&secret=5b361b69fb998e0db1be2d873ed85326 HTTP/1.1" 200 175
+INFO 2016-04-01 05:00:40,318 connectionpool Starting new HTTPS connection (1): api.weixin.qq.com
+DEBUG 2016-04-01 05:00:40,458 connectionpool "GET /cgi-bin/token?grant_type=client_credential&appid=wxd4f684d8f3edc620&secret=5b361b69fb998e0db1be2d873ed85326 HTTP/1.1" 200 175
+INFO 2016-04-01 05:00:40,466 connectionpool Starting new HTTPS connection (1): api.weixin.qq.com
+DEBUG 2016-04-01 05:00:40,589 connectionpool "GET /cgi-bin/ticket/getticket?access_token=fTxlURTWyeOi9n-ci7P8GR_nCZV5uLZ72m8HRq3LOTiOGzRuErUdtg_KRQla5xKwcEkrzKGB9L-ysg3Vpnf7H6VYUT5rlJm7xJLWljh7DNDQP0jCfu6OMD1imCRfGwrTGUWaADACQS&type=jsapi HTTP/1.1" 200 143

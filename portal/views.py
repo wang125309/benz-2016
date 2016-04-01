@@ -17,6 +17,7 @@ import re
 import math
 import random
 import xlrd
+import xlwt
 reload(sys)
 sys.setdefaultencoding('UTF-8')
 
@@ -73,4 +74,50 @@ def inexc(request):
         b.save()
     return JsonResponse({
         "error_no": 0
+    })
+
+def login(request):
+    uname = post_params(request,'uname')
+    upwd = post_params(request,'upwd')
+    u = BackUser.objects.filter(service_name=uname)
+    if len(u) == 1:
+        if upwd == u[0].password:
+            request.session['BKUSER'] = uname
+            return JsonResponse({
+                "error_no":"0"
+            })
+        else:
+            return JsonResponse({
+                "error_no":"1",
+                "data":{
+                    "message":"password wrong"    
+                }
+            })
+    else:
+        return JsonResponse({
+            "error_no":"1",
+            "data":{
+                "message":"no such user"    
+            }
+        })
+
+def download(request):
+    f = xlwt.Workbook()
+    table = f.add_sheet('active',cell_overwrite_ok=True)
+    line = 0
+    if request.session['BKUSER']:
+        u = User.objects.filter(service_name=request.session['BKUSER'])
+        for i in u:
+            table.write(line,0,i.id)
+            table.write(line,1,i.name)
+            table.write(line,2,i.mobile)
+            table.write(line,3,i.email)
+            table.write(line,4,i.sex)
+            table.write(line,5,i.province)
+            table.write(line,6,i.service_name)
+            line += 1
+    f.save("static/data/"+request.session['BKUSER']+".xls")
+    return JsonResponse({
+        "error_no":"0",
+        "file":"static/data/"+request.session['BKUSER']+".xls"
     })
