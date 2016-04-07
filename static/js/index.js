@@ -2068,7 +2068,6 @@ work = function(){
     });
     var submit_success = function() {
         $(".submit-success").velocity("fadeIn");
-        $(".background").velocity("fadeOut");
     };
 
     $("#submit").on("tap",function(){
