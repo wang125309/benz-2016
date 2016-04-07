@@ -40,7 +40,7 @@ gulp.task('js',function(){
     for (i in js_files) {
         gulp.src('./static/js-modify/*.js')
 			.pipe(browserify())
-            .pipe(uglify())
+            //.pipe(uglify())
             .pipe(gulp.dest('./static/js'));
     }
 });

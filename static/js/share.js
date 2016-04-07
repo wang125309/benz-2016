@@ -1,1 +1,35 @@
-!function n(r,o,t){function e(u,c){if(!o[u]){if(!r[u]){var f="function"==typeof require&&require;if(!c&&f)return f(u,!0);if(i)return i(u,!0);throw new Error("Cannot find module '"+u+"'")}var a=o[u]={exports:{}};r[u][0].call(a.exports,function(n){var o=r[u][1][n];return e(o?o:n)},a,a.exports,n,r,o,t)}return o[u].exports}for(var i="function"==typeof require&&require,u=0;u<t.length;u++)e(t[u]);return e}({1:[function(){$(function(){$.post("/portal/wxconfig/",{url:location.href},function(n){wx.config(n);var r=function(){shareJson={link:"http://benz.importos.com",imgUrl:"http://benz.importos.com/static/image/share-little-icon.jpg",title:"天地既征途-2016 梅赛德斯-奔驰南区SUV征服之旅",desc:"天地即征途——2016 梅赛德斯-奔驰SUV 即将在万众瞩目中强势来袭，作为南区该活动的前奏预热，将在南区10 大城市全线倾情展开梅赛德斯-奔驰南区SUV 征服之旅"},wx.onMenuShareTimeline(shareJson),wx.onMenuShareAppMessage(shareJson)};wx.ready(function(){r()}),wx.error(function(){$.get("/wx/portal/update_access_token/",function(){$.post("/wx/portal/wxconfig/",{url:location.href},function(n){wx.config(n),wx.ready(function(){r()})})})})})})},{}]},{},[1]);
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+$(function(){
+    $.post("/portal/wxconfig/",{
+		"url":location.href,
+	},function(data){
+		wx.config(data);
+        var share = function() {
+            shareJson = {
+                link:"http://benz.importos.com",
+                imgUrl:"http://benz.importos.com/static/image/share-little-icon.jpg",
+                title:"天地既征途-2016 梅赛德斯-奔驰南区SUV征服之旅",
+                desc:"天地即征途——2016 梅赛德斯-奔驰SUV 即将在万众瞩目中强势来袭，作为南区该活动的前奏预热，将在南区10 大城市全线倾情展开梅赛德斯-奔驰南区SUV 征服之旅"
+            };
+			wx.onMenuShareTimeline(shareJson);
+			wx.onMenuShareAppMessage(shareJson);
+        };
+		wx.ready(function(){
+            share();
+        });
+		wx.error(function(res){
+			$.get("/wx/portal/update_access_token/",function(data){
+				$.post("/wx/portal/wxconfig/",{
+					"url":location.href
+				},function(data){
+					wx.config(data);
+					wx.ready(function(){
+		                share();
+                    });
+		        });
+		    });
+        });
+    });
+});
+
+},{}]},{},[1])
