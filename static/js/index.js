@@ -1917,7 +1917,7 @@ work = function(){
         end = new Date().getTime();
     });
     $(".introduct").on("touchend",function(){
-        if(end-start > 150) {
+        if(end-start > 50) {
             upset += 1;
             if(upset == 1) {
                 $(".title1").velocity("fadeOut");
