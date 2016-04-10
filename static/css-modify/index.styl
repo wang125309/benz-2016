@@ -11,6 +11,22 @@
     100%
         -webkit-keyframes:scale(1.2)
         opacity:0
+        
+@-webkit-keyframes up-animation 
+    0%,100% 
+        -webkit-transform:scale(1)
+        opacity:.9
+    
+    1%,99% 
+        -webkit-transform:translateY(0)
+    
+    49% 
+        -webkit-transform:translateY(-15px)
+    
+    50% 
+        opacity:0
+        -webkit-transform:scale(0.2)
+        
 animation(time,name,delay) 
     -webkit-animation-duration:time
     -webkit-animation-name:name
@@ -26,6 +42,8 @@ animation(time,name,delay)
     user-select: none
     -webkit-touch-callout:none
     -webkit-tap-highlight-color:transparent
+    
+
 
 background(image) 
     height:100%
@@ -60,6 +78,19 @@ image-fit(image)
 
 
 
+.up 
+    -webkit-animation-name:up-animation
+    -webkit-animation-duration: 1.5s!important
+    -webkit-animation-timing-function: ease
+    -webkit-animation-iteration-count:infinite
+    -webkit-animation-fill-mode:both
+    image-wauto('up.png')
+    height:0.1rem
+    width:0.08rem
+    position:absolute
+    bottom:0
+    z-index:5
+    left:0.46rem
 
 body 
     height:100%
@@ -147,7 +178,9 @@ body
             position:absolute
             right:0.114rem
             top:0
-            image-wauto('sound-open.png')
+            image-hauto('music-close.png')
+        .music-play
+            image-hauto('sound-open.png')
         .share
             width:0.037rem
             height:0.04rem
@@ -183,6 +216,21 @@ body
         width:100%
         height:100%
         background('0.jpg')
+        .title1
+            position:absolute
+            height:1rem
+            top:0.2rem
+            width:100%
+            image-wauto('title-1.png')
+            left:0
+        .title2
+            position:absolute
+            height:1rem
+            top:0.2rem
+            width:100%
+            image-wauto('title-2.png')
+            left:0
+            display:none
     .background-cla
         display:none
         position:absolute
@@ -292,7 +340,7 @@ body
             .car-text
                 image-wauto('car1-text.png')
                 width:100%
-                height:0.5rem
+                height:0.52rem
     .car2
         display:none
         position:absolute

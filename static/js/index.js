@@ -1881,6 +1881,7 @@ window.onload = function() {
     $("#audio").attr({"src":"/static/image/background.mp3"});
     $("#audio")[0].play();
     on = true;
+    $(".music").addClass("music-play");
     $(".music").on("tap",function(){
         if(on) {
             on = false;
@@ -1915,6 +1916,10 @@ work = function(){
     $(".introduct").on("touchend",function(){
         if(end-start > 150) {
             upset += 1;
+            if(upset == 1) {
+                $(".title1").velocity("fadeOut");
+                $(".title2").velocity("fadeIn");
+            }
             if(upset == 2) {
                 $(".introduct").velocity("fadeOut");
                 $(".swiper-container").velocity("fadeIn",function(){
