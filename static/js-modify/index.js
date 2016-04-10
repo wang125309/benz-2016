@@ -119,6 +119,9 @@ work = function(){
         $(".num").html("100%");
         $(".loading-background").css("display","none");
         $(".introduct").css("display","block");
+                            setTimeout(function(){
+                                $(".title12").velocity("fadeIn");
+                            },500);
     },500);
     upset = 0;
     start = 0;
@@ -134,6 +137,7 @@ work = function(){
             upset += 1;
             if(upset == 1) {
                 $(".title1").velocity("fadeOut");
+                $(".title12").velocity("fadeOut");
                 $(".title2").velocity("fadeIn");
             }
             if(upset == 2) {
@@ -143,6 +147,7 @@ work = function(){
                         direction:'vertical',
                         speed:500,
                         onInit: function() {
+
                         },
                         onSlideChangeEnd: function(swiper){
                             if(swiper.activeIndex == 0) {
