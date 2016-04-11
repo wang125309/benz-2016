@@ -2063,9 +2063,6 @@ work = function(){
         else if(!$("#mobile").val().length || $("#mobile").val().length != 11) {
             return -3;
         }
-        else if(!$("#province").val() == "0") {
-            return -4;
-        }
         else {
             return 1;
         }
@@ -2079,10 +2076,18 @@ work = function(){
     var submit_success = function() {
         $(".submit-success").velocity("fadeIn");
     };
+    var alertMessage = function(message) {
+        $(".alertMessage").velocity("fadeIn");
+        $(".alertMessage").html(message);
+        setTimeout(function(){
+            $(".alertMessage").velocity("fadeOut");
+        },1000);
 
+    };
     $("#submit").on("tap",function(){
         checked = check();
-        if(checked) {
+        console.log(checked);
+        if(checked == '1') {
             $.post("/portal/submit/",{
                 "name":$("#name").val(),
                 "sex":$("#sex").val(),
@@ -2099,16 +2104,16 @@ work = function(){
         } 
         else {
             if(checked == "-1") {
-                alert("名字是必填项哦");
+                alertMessage("名字是必填项哦");
             }
             else if(checked == '-2') {
-                alert("请选择性别");
+                alertMessage("请选择性别");
             }
             else if(checked == '-3') {
-                alert("电话格式不对哦");
+                alertMessage("电话格式不对哦");
             }
             else if(checked == '-4') {
-                alert("请选择省份哦");
+                alertMessage("请选择省份哦");
             }
         }
     });
