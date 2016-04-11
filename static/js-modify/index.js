@@ -322,14 +322,8 @@ work = function(){
             if(checked == "-1") {
                 alertMessage("名字是必填项哦");
             }
-            else if(checked == '-2') {
-                alertMessage("请选择性别");
-            }
-            else if(checked == '-3') {
-                alertMessage("电话格式不对哦");
-            }
-            else if(checked == '-4') {
-                alertMessage("请选择省份哦");
+            else  {
+                alertMessage("请填写完整信息");
             }
         }
     });
