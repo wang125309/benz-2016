@@ -2103,12 +2103,7 @@ work = function(){
             })
         } 
         else {
-            if(checked == "-1") {
-                alertMessage("名字是必填项哦");
-            }
-            else  {
-                alertMessage("请填写完整信息");
-            }
+            alertMessage("请填写完整信息");
         }
     });
     
