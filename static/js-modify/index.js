@@ -197,6 +197,8 @@ work = function(){
             $("#city").append(cityOpt);
         }
         $("#mall").children().remove();
+        busOpt = $("<option value='-1'>请选择</option>");
+        $("#mall").append(busOpt);
         for(var j=0;j<business[id][0]['bus'].length;j++) {
             busOpt = $("<option value='"+business[id][0]['bus'][j]['busname']+"'>"+business[id][0]['bus'][j]['busname']+"</option>");
             $("#mall").append(busOpt);
@@ -215,6 +217,8 @@ work = function(){
         for(var i=0;i<business[selectP].length;i++) {
             if(city == business[selectP][i]['name']) {
                 $("#mall").children().remove();
+                busOpt = $("<option value='-1'>请选择</option>");
+                $("#mall").append(busOpt);
                 for(var j=0;j<business[selectP][i]['bus'].length;j++) {
                     busOpt = $("<option value='"+business[selectP][i]['bus'][j]['busname']+"'>"+business[selectP][i]['bus'][j]['busname']+"</option>");
                     $("#mall").append(busOpt);
