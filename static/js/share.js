@@ -8,7 +8,7 @@ $(function(){
             shareJson = {
                 link:location.href,
                 imgUrl:"http://benz.importos.com/static/image/share-little-icon.jpg",
-                title:"天地即征途-2016 梅赛德斯-奔驰南区SUV征服之旅",
+                title:"天地即征途——2016梅赛德斯-奔驰SUV南区征服之旅即将在万众瞩目中震撼来袭！",
                 desc:"天地即征途——2016 梅赛德斯-奔驰SUV 即将在万众瞩目中强势来袭，作为南区该活动的前奏预热，将在南区10 大城市全线倾情展开梅赛德斯-奔驰南区SUV 征服之旅"
             };
 			wx.onMenuShareTimeline(shareJson);
