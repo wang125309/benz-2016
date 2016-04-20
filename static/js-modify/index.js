@@ -177,9 +177,8 @@ work = function(){
         ],
 		"3": [
             {"name":"厦门","pinyin":"xiamen","bus":[{"busname":"厦门东之星","address":"厦门市海沧区马青路1221号"},{"busname":"厦门东之星.星聚点","address":"厦门思明区体育路38号华强企业大楼一层之一"},{"busname":"厦门航星","address":"厦门高崎国际机场"}]},
-			{"name":"石狮","pinyin":"shishi","bus":[{"busname":"石狮大长江红星","address":"石狮市石泉路入口处奔驰大厦"}]},
 			{"name":"福州","pinyin":"fouzhou","bus":[{"busname":"福州东星","address":"福州市仓山区福峡路755号"},{"busname":"福州利之星","address":"福州市青口海峡汽车城（沈海高速兰圃出口往前200米）"},{"busname":"福建波士骏达","address":"福州市乌龙江南大道29号"},{"busname":"福州鹏龙国戎","address":"福州市闽侯县荆溪镇永丰社区"}]},
-            {"name":"泉州","pinyin":"quanzhou","bus":[{"busname":"泉州闽星","address":"晋江世纪大道奔驰大厦（博物馆对面）"},{"busname":"泉州中升之星","address":"泉州清濛经济技术开发区迎宾大道"},{"busname":"泉州之星","address":"福建省泉州市丰泽区城华南路18号泉州之星奔驰"},{"busname":"泉州瑞星","address":"福建省泉州市鲤城区南环路99号瑞星大厦"},{"busname":"泉州中升星辉","address":"福建省泉州市南安市水头镇海联创业园DK31-B号地块"}]}
+            {"name":"泉州","pinyin":"quanzhou","bus":[{"busname":"泉州闽星","address":"晋江世纪大道奔驰大厦（博物馆对面）"},{"busname":"泉州中升之星","address":"泉州清濛经济技术开发区迎宾大道"},{"busname":"泉州之星","address":"福建省泉州市丰泽区城华南路18号泉州之星奔驰"},{"busname":"泉州瑞星","address":"福建省泉州市鲤城区南环路99号瑞星大厦"},{"busname":"泉州中升星辉","address":"福建省泉州市南安市水头镇海联创业园DK31-B号地块"},{"busname":"石狮大长江红星","address":"石狮市石泉路入口处奔驰大厦"}]}
         ],
 		"4": [
             {"name":"长沙","pinyin":"changsha","bus":[{"busname":"湖南龙星行","address":"长沙高新区文轩路920号"},{"busname":"湖南仁孚","address":"长沙市中南汽车世界A区A01（星沙收费站旁）"},{"busname":"湖南鹏龙瑞丰","address":"长沙市雨花区万家丽路与黄谷路口东300米"},{"busname":"湖南华美","address":"长沙市芙蓉南路一段999号（省政府东门）"}]}
