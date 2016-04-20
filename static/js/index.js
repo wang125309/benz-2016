@@ -1839,7 +1839,7 @@ window.onload = function() {
     else if(c == 'nanchang') {
         city = NANCHANG;
     }
-    else if(c == 'fuzhou') {
+    else if(c == 'fouzhou') {
         city = FUZHOU;
     }
     else if(c == 'xiamen') {
